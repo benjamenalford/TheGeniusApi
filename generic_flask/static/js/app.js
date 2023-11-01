@@ -40,7 +40,7 @@ d3.json("/api/songs").then(data => {
             return { text: d, size: 10 + Math.random() * 90, test: "haha" };
         }))
         .padding(5)
-        .rotate(function () { return ~~(Math.random() * 2) * 90; })
+        .rotate(function () { return 0; })
         .font("Impact")
         .fontSize(function (d) { return d.size; })
         .on("end", draw);
