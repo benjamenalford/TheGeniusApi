@@ -1,0 +1,7 @@
+Flask
+gunicorn
+numpy
+sqlalchemy
+bson
+pymongo
+dnspython
