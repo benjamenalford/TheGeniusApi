@@ -19,7 +19,10 @@ d3.json("/api/songs").then(data => {
 
                 if (key == "url") {
                     newRow.append('td').append('a').text(value).attr('href', value).attr('target', '_blank')
-                } else {
+                } else if (key == 'header_image_thumbnail_url') {
+                    newRow.append('td').append('img').attr('src', value).attr("class", "thumb");
+                }
+                else {
                     newRow.append('td').text(value)
                 }
             }
