@@ -21,7 +21,8 @@ def default():
 
 @app.route("/api/songs")
 def api():
-    data = song_collection.find()
+    data = song_collection.find(
+        {}, projection={'_id': 0, 'lyrics_state': 0, 'path': 0, 'full_title': 0, 'header_image_url': 0})
     return json_util.dumps(data)
 
 
